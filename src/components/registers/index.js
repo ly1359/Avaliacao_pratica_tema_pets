@@ -3,7 +3,7 @@ import {View, Text, TextInput, Button, Image, StyleSheet} from 'react-native';
 
 export default function Register(){
     const [inputText, setInputText] = useState('');
-    const [displayText, setDisplayText] = useState('TEXTO AQUI')
+    const [displayText, setDisplayText] = useState('')
 
     return (
         <View style={styles.container}>
@@ -28,7 +28,7 @@ export default function Register(){
             </View>
 
             <View style={styles.buttonContainer}>
-                <Button title="LIMPAR"  onPress={() => {setInputText(''), setDisplayText('TEXTO AQUI')}}/>
+                <Button title="LIMPAR"  onPress={() => {setInputText('')}}/>
                 <Button title="CADASTRAR" onPress={() => setDisplayText(inputText)}/>
             </View>
 
@@ -41,7 +41,7 @@ export default function Register(){
 
 const styles = StyleSheet.create({
     container: {margin:10, alignContent: 'space-around'},
-    titleContainer: {display:'flex', alignItems:'center'},
+    titleContainer: {display:'flex', alignItems:'center', fontWeight: 'bold', marginBottom:20},
     title: {fontSize:16, margin: 5},
     inputContainer: {display:'flex', flexDirection:'row', justifyContent:'center', margin: 10},
     inputTitle: {displa:'flex', alignItems: 'center'},
